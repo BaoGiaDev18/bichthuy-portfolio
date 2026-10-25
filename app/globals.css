@@ -125,6 +125,8 @@ button { font: inherit; }
 .work-card { display: flex; flex-wrap: wrap; text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; transition: transform 0.35s ease, box-shadow 0.35s ease; }
 .work-card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(42,46,51,0.10); }
 .work-card.beige { background: var(--beige); }
+.work-card.on-beige { background: #fff; }
+.bg-beige .work-card.outlined { border-color: #fff; }
 .work-card.outlined { background: #fff; border: 1px solid var(--line); flex-wrap: wrap-reverse; }
 .work-body { flex: 1 1 420px; min-width: 0; padding: 40px; display: flex; flex-direction: column; gap: 18px; justify-content: center; }
 .work-body h3 { margin: 0; font-family: var(--font-head); font-weight: 500; font-size: clamp(26px, 3vw, 36px); letter-spacing: 0.02em; }
@@ -149,6 +151,7 @@ button { font: inherit; }
 .exp-col { flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
 .edu-col { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
 .exp-card { background: #fff; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
+.exp-card.tinted { background: var(--beige); }
 .exp-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
 .exp-card h3 { margin: 0; font-family: var(--font-head); font-size: 18px; font-weight: 600; }
 .dates { font-size: 13px; color: var(--muted); }

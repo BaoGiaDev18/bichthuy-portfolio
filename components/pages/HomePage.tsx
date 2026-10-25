@@ -91,14 +91,53 @@ export default function HomePage({ lang }: { lang: Lang }) {
           </div>
         </section>
 
-        <section id="work" aria-labelledby="work-h" className="bg-white">
+        <section id="experience" aria-labelledby="exp-h" className="bg-white exp">
+          <div className="wrap section">
+            <div className="exp-col">
+              <Label id="exp-h">{h.experienceLabel}</Label>
+              <article className="exp-card tinted reveal">
+                <div className="exp-top"><h3>{h.htv.company}</h3><span className="dates">{h.htv.dates}</span></div>
+                <p className="role">{h.htv.role}</p>
+                <ul className="bullets">{h.htv.points.map((p) => <li key={p}>{p}</li>)}</ul>
+                <div className="row">
+                  <span className="chip">{h.htv.score}</span>
+                  <Link className="text-link" href={PATHS.htv[lang]}>{h.htv.link}</Link>
+                </div>
+              </article>
+              <article className="exp-card tinted reveal">
+                <div className="exp-top"><h3>{h.studentVideo.company}</h3><span className="dates">{h.studentVideo.dates}</span></div>
+                <p className="role">{h.studentVideo.role}</p>
+                <ul className="bullets">{h.studentVideo.points.map((p) => <li key={p}>{p}</li>)}</ul>
+                <a className="text-link" style={{ paddingTop: 0 }} href={VIDEOS.studentVideo} target="_blank" rel="noopener">{h.studentVideo.link}</a>
+              </article>
+            </div>
+            <div className="edu-col">
+              <Label>{h.educationLabel}</Label>
+              <div className="edu-block reveal">
+                <h3>{h.school}</h3>
+                <p>{h.degree}<br />{h.degreeStatus}</p>
+                <ul className="edu-list">{h.eduPoints.map((p) => <li key={p}>{p}</li>)}</ul>
+              </div>
+              <div className="edu-block reveal">
+                <h3 className="small-caps">{h.languagesLabel}</h3>
+                <div className="tags">{h.languages.map((l) => <span className="tag tag-lg tag-white" key={l}>{l}</span>)}</div>
+              </div>
+              <div className="edu-block reveal">
+                <h3 className="small-caps">{h.awardsLabel}</h3>
+                <ul className="edu-list" style={{ marginTop: 0 }}>{h.awards.map((a) => <li key={a}>{a}</li>)}</ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" aria-labelledby="work-h" className="bg-beige">
           <div className="wrap section stack gap-40">
             <div className="stack gap-14 reveal">
               <Label id="work-h">{h.workLabel}</Label>
               <p className="serif-title">{h.workTitle}</p>
             </div>
 
-            <Link href={PATHS.tram[lang]} className="work-card beige reveal">
+            <Link href={PATHS.tram[lang]} className="work-card on-beige reveal">
               <div className="collage zoom">
                 {COLLAGE.map((c, k) => (
                   <img key={c.src} src={c.src} alt={d.tram.collageAlt[k]} style={c.style} loading="lazy" />
@@ -128,45 +167,6 @@ export default function HomePage({ lang }: { lang: Lang }) {
                 <img className="cover-img" src="/media/dirtycoins/home-cover.jpg" alt={h.dirtycoins.imageAlt} loading="lazy" />
               </div>
             </Link>
-          </div>
-        </section>
-
-        <section id="experience" aria-labelledby="exp-h" className="bg-beige exp">
-          <div className="wrap section">
-            <div className="exp-col">
-              <Label id="exp-h">{h.experienceLabel}</Label>
-              <article className="exp-card reveal">
-                <div className="exp-top"><h3>{h.htv.company}</h3><span className="dates">{h.htv.dates}</span></div>
-                <p className="role">{h.htv.role}</p>
-                <ul className="bullets">{h.htv.points.map((p) => <li key={p}>{p}</li>)}</ul>
-                <div className="row">
-                  <span className="chip">{h.htv.score}</span>
-                  <Link className="text-link" href={PATHS.htv[lang]}>{h.htv.link}</Link>
-                </div>
-              </article>
-              <article className="exp-card reveal">
-                <div className="exp-top"><h3>{h.studentVideo.company}</h3><span className="dates">{h.studentVideo.dates}</span></div>
-                <p className="role">{h.studentVideo.role}</p>
-                <ul className="bullets">{h.studentVideo.points.map((p) => <li key={p}>{p}</li>)}</ul>
-                <a className="text-link" style={{ paddingTop: 0 }} href={VIDEOS.studentVideo} target="_blank" rel="noopener">{h.studentVideo.link}</a>
-              </article>
-            </div>
-            <div className="edu-col">
-              <Label>{h.educationLabel}</Label>
-              <div className="edu-block reveal">
-                <h3>{h.school}</h3>
-                <p>{h.degree}<br />{h.degreeStatus}</p>
-                <ul className="edu-list">{h.eduPoints.map((p) => <li key={p}>{p}</li>)}</ul>
-              </div>
-              <div className="edu-block reveal">
-                <h3 className="small-caps">{h.languagesLabel}</h3>
-                <div className="tags">{h.languages.map((l) => <span className="tag tag-lg tag-white" key={l}>{l}</span>)}</div>
-              </div>
-              <div className="edu-block reveal">
-                <h3 className="small-caps">{h.awardsLabel}</h3>
-                <ul className="edu-list" style={{ marginTop: 0 }}>{h.awards.map((a) => <li key={a}>{a}</li>)}</ul>
-              </div>
-            </div>
           </div>
         </section>
 

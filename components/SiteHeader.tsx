@@ -14,8 +14,8 @@ export default function SiteHeader({ lang, page }: { lang: Lang; page: PageKey }
         </Link>
         {page === "home" ? (
           <nav className="nav" aria-label="Main">
-            <a href="#work">{t.nav.work}</a>
             <a href="#experience">{t.nav.experience}</a>
+            <a href="#work">{t.nav.work}</a>
             <a href="#skills">{t.nav.skills}</a>
             <a href="#contact">{t.nav.contact}</a>
           </nav>
