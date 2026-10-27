@@ -96,14 +96,14 @@ export default function HomePage({ lang }: { lang: Lang }) {
           <div className="wrap section">
             <div className="exp-col">
               <Label id="exp-h">{h.experienceLabel}</Label>
-              <article className="exp-card tinted reveal">
+              <article className="exp-card tinted clickable reveal">
                 <div className="exp-top"><h3>{h.htv.company}</h3><span className="dates">{h.htv.dates}</span></div>
                 <p className="role">{h.htv.role}</p>
                 <ul className="bullets">{h.htv.points.map((p) => <li key={p}>{p}</li>)}</ul>
                 <Video className="exp-media" src="/media/htv/behind-the-scenes.mp4" title={h.htv.videoTitle} cover="/media/htv/program-monitor.jpg" badge={h.htv.videoBadge} playLabel={d.ui.play} />
                 <div className="row">
                   <span className="chip">{h.htv.score}</span>
-                  <Link className="text-link" href={PATHS.htv[lang]}>{h.htv.link}</Link>
+                  <Link className="text-link stretched" href={PATHS.htv[lang]}>{h.htv.link}</Link>
                 </div>
               </article>
               <article className="exp-card tinted reveal">

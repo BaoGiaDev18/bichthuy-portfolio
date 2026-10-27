@@ -152,7 +152,11 @@ button { font: inherit; }
 .edu-col { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
 .exp-card { background: #fff; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
 .exp-card.tinted { background: var(--beige); }
-.exp-media { margin: 4px 0 2px; border-radius: 14px; }
+.exp-media { margin: 4px 0 2px; border-radius: 14px; z-index: 2; }
+.exp-card.clickable { position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.exp-card.clickable:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(42,46,51,0.10); }
+.exp-card.clickable:hover .stretched { text-decoration-thickness: 2px; }
+.stretched::after { content: ""; position: absolute; inset: 0; border-radius: 20px; z-index: 1; }
 .exp-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
 .exp-card h3 { margin: 0; font-family: var(--font-head); font-size: 18px; font-weight: 600; }
 .dates { font-size: 13px; color: var(--muted); }
