@@ -1,10 +1,10 @@
-import { DICT, VIDEOS, type Lang } from "../../content/site";
+import { DICT, R2_VIDEOS, VIDEOS, type Lang } from "../../content/site";
 import SiteHeader from "../SiteHeader";
 import Label from "../Label";
 import Facts from "../Facts";
 import DidList from "../DidList";
 import Gallery from "../Gallery";
-import YouTube from "../YouTube";
+import Video from "../Video";
 import PageNav from "../PageNav";
 
 const PHOTOS = [
@@ -24,7 +24,7 @@ export default function DirtycoinsPage({ lang }: { lang: Lang }) {
           <p>{t.summary}</p>
         </section>
         <section className="wrap">
-          <YouTube id={VIDEOS.dirtycoins} title={t.title} cover="/media/dirtycoins/opera-house.jpg" badge={t.videoBadge} playLabel={d.ui.play} big />
+          <Video r2={R2_VIDEOS.dirtycoins} youtubeId={VIDEOS.dirtycoins} title={t.title} cover="/media/dirtycoins/opera-house.jpg" badge={t.videoBadge} playLabel={d.ui.play} big />
         </section>
         <Facts items={t.facts} />
 

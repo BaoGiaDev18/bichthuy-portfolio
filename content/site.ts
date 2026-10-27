@@ -19,6 +19,18 @@ export const CONTACT = {
   cv: "/cv/Tran-Bich-Thuy-CV.pdf",
 };
 
+// Long videos are stored in Cloudflare R2 and play directly on the site.
+// MEDIA_BASE is the bucket's public URL (no trailing slash). While it is empty,
+// the site falls back to the YouTube / Google Drive links in VIDEOS.
+export const MEDIA_BASE = "";
+
+export const R2_VIDEOS = {
+  film: { hd: "film-1080.mp4" },
+  recap: { hd: "recap-1080.mp4", sd: "recap-720.mp4" },
+  dirtycoins: { hd: "dirtycoins-1080.mp4", sd: "dirtycoins-720.mp4" },
+  mv: { hd: "cu-tho-di-1080.mp4", sd: "cu-tho-di-720.mp4" },
+};
+
 export const VIDEOS = {
   film: "RxpgUJrz0Qw",
   recap: "_2JBQ6ZBhsI",

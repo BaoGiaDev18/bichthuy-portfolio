@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { CONTACT, DICT, PATHS, VIDEOS, type Lang } from "../../content/site";
+import { CONTACT, DICT, PATHS, R2_VIDEOS, VIDEOS, type Lang } from "../../content/site";
 import SiteHeader from "../SiteHeader";
 import Label from "../Label";
 import { PlayIcon } from "../Icons";
+import Video from "../Video";
 
 const SPARKLE = (cx: number, cy: number, rx: number, ry: number) => {
   const k = 0.14;
@@ -191,14 +192,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
               <p className="serif-title">{h.otherTitle}</p>
             </div>
             <div className="media-row reveal">
-              <a className="video-frame media-main" href={VIDEOS.mvDrive} target="_blank" rel="noopener" aria-label={h.mv.ariaLabel}>
-                <img className="cover" src="/media/other/cu-tho-di.jpg" alt="" loading="lazy" />
-                <span className="badge">{h.mv.badge}</span>
-                <span className="play-overlay">
-                  <span className="play-btn"><PlayIcon /></span>
-                  <span className="play-note">{d.ui.watchOnDrive}</span>
-                </span>
-              </a>
+              <Video className="media-main" r2={R2_VIDEOS.mv} driveUrl={VIDEOS.mvDrive} title={h.mv.title} cover="/media/other/cu-tho-di.jpg" badge={h.mv.badge} playLabel={d.ui.play} driveLabel={d.ui.watchOnDrive} />
               <div className="media-text">
                 <span className="meta">{h.mv.meta}</span>
                 <h3>{h.mv.title}</h3>

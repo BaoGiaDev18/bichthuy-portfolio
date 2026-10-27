@@ -1,10 +1,10 @@
-import { DICT, VIDEOS, type Lang } from "../../content/site";
+import { DICT, R2_VIDEOS, VIDEOS, type Lang } from "../../content/site";
 import SiteHeader from "../SiteHeader";
 import Label from "../Label";
 import Facts from "../Facts";
 import DidList from "../DidList";
 import Gallery from "../Gallery";
-import YouTube from "../YouTube";
+import Video from "../Video";
 import PageNav from "../PageNav";
 
 const PHOTOS = [
@@ -87,7 +87,7 @@ export default function TramPage({ lang }: { lang: Lang }) {
             <GroupHead num="01" label={t.groups.film.label} sub={t.groups.film.title} />
             <div className="media-row reveal">
               <div className="media-main">
-                <YouTube id={VIDEOS.film} title={t.film.title} cover="/media/tram/film-cover.jpg" badge="Film" playLabel={d.ui.play} />
+                <Video r2={R2_VIDEOS.film} youtubeId={VIDEOS.film} title={t.film.title} cover="/media/tram/film-cover.jpg" badge="Film" playLabel={d.ui.play} />
               </div>
               <div className="media-text">
                 <span className="meta">{t.film.meta}</span>
@@ -101,7 +101,7 @@ export default function TramPage({ lang }: { lang: Lang }) {
             <GroupHead num="02" label={t.groups.event.label} sub={t.groups.event.title} />
             <div className="media-row reverse reveal">
               <div className="media-main">
-                <YouTube id={VIDEOS.recap} title={t.recap.title} cover="/media/tram/recap-cover.jpg" badge="Recap" playLabel={d.ui.play} />
+                <Video r2={R2_VIDEOS.recap} youtubeId={VIDEOS.recap} title={t.recap.title} cover="/media/tram/recap-cover.jpg" badge="Recap" playLabel={d.ui.play} />
               </div>
               <div className="media-text">
                 <span className="meta">{t.recap.meta}</span>
