@@ -25,7 +25,7 @@ export const CONTACT = {
 export const MEDIA_BASE = "https://pub-6fd83ceb40c94ede9453b460892d1f98.r2.dev";
 
 export const R2_VIDEOS = {
-  film: { hd: "film-1080.mp4", sd: "film-720.mp4", pending: true }, // pending: still uploading, YouTube is used meanwhile
+  film: { hd: "film-1080.mp4", sd: "film-720.mp4" },
   recap: { hd: "recap-1080.mp4", sd: "recap-720.mp4" },
   dirtycoins: { hd: "dirtycoins-1080.mp4", sd: "dirtycoins-720.mp4" },
   mv: { hd: "cu-tho-di-1080.mp4", sd: "cu-tho-di-720.mp4" },
