@@ -25,7 +25,7 @@ export const CONTACT = {
 export const MEDIA_BASE = "";
 
 export const R2_VIDEOS = {
-  film: { hd: "film-1080.mp4" },
+  film: { hd: "film-1080.mp4", sd: "film-720.mp4" },
   recap: { hd: "recap-1080.mp4", sd: "recap-720.mp4" },
   dirtycoins: { hd: "dirtycoins-1080.mp4", sd: "dirtycoins-720.mp4" },
   mv: { hd: "cu-tho-di-1080.mp4", sd: "cu-tho-di-720.mp4" },
