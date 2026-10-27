@@ -192,7 +192,7 @@ const en = {
     },
     film: {
       meta: "Short film · 19 min",
-      title: "Chuyển Lời Nhà",
+      title: "Chuyện Lời Nhà",
       text: "The heart of the campaign: a short film about the care parents hide inside everyday words that Gen Z often hears as nagging. It premiered at the campaign's main event.",
     },
     recap: {
@@ -481,7 +481,7 @@ const vi: Dict = {
     },
     film: {
       meta: "Phim ngắn · 19 phút",
-      title: "Chuyển Lời Nhà",
+      title: "Chuyện Lời Nhà",
       text: "Trái tim của chiến dịch: phim ngắn về sự quan tâm cha mẹ gửi gắm trong những lời nói thường ngày mà Gen Z hay nghe như lời cằn nhằn. Phim được công chiếu tại sự kiện chính của chiến dịch.",
     },
     recap: {
