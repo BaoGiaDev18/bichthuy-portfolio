@@ -116,6 +116,8 @@ const en = {
       ],
       score: "Internship score 9.15/10",
       link: "View experience →",
+      videoTitle: "Behind the scenes at the HTV studio",
+      videoBadge: "Behind the scenes · 0:45",
     },
     studentVideo: {
       company: "Student Video Project, FPT University",
@@ -405,6 +407,8 @@ const vi: Dict = {
       ],
       score: "Điểm thực tập 9.15/10",
       link: "Xem chi tiết →",
+      videoTitle: "Hậu trường tại trường quay HTV",
+      videoBadge: "Hậu trường · 0:45",
     },
     studentVideo: {
       company: "Dự án video sinh viên, Đại học FPT",

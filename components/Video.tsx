@@ -15,22 +15,23 @@ function pickSource(src: Sources) {
 }
 
 export default function Video({
-  r2, youtubeId, driveUrl, title, cover, badge, playLabel, driveLabel, big = false, className = "",
+  r2, src, youtubeId, driveUrl, title, cover, badge, playLabel, driveLabel, big = false, className = "",
 }: {
-  r2?: Sources; youtubeId?: string; driveUrl?: string; title: string; cover: string; badge?: string;
+  r2?: Sources; src?: string; youtubeId?: string; driveUrl?: string; title: string; cover: string; badge?: string;
   playLabel: string; driveLabel?: string; big?: boolean; className?: string;
 }) {
   const [on, setOn] = useState(false);
   const ref = useRef<HTMLVideoElement>(null);
   const frame = `${big ? "video-frame big" : "video-frame"} ${className}`.trim();
 
-  // Cloudflare R2: play the file directly in the page.
-  if (MEDIA_BASE && r2 && !r2.pending) {
+  // A file hosted with the site itself, or a Cloudflare R2 file: play it directly in the page.
+  const useR2 = Boolean(MEDIA_BASE && r2 && !r2.pending);
+  if (src || useR2) {
     if (on) {
       return (
         <div className={frame} style={{ cursor: "default" }}>
           {badge ? <span className={big ? "badge badge-lg" : "badge"}>{badge}</span> : null}
-          <video ref={ref} controls autoPlay playsInline preload="auto" poster={cover} src={`${MEDIA_BASE}/${pickSource(r2)}`} aria-label={title} />
+          <video ref={ref} controls autoPlay playsInline preload="auto" poster={cover} src={src ?? `${MEDIA_BASE}/${pickSource(r2!)}`} aria-label={title} />
         </div>
       );
     }

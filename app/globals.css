@@ -152,6 +152,7 @@ button { font: inherit; }
 .edu-col { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
 .exp-card { background: #fff; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
 .exp-card.tinted { background: var(--beige); }
+.exp-media { margin: 4px 0 2px; border-radius: 14px; }
 .exp-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
 .exp-card h3 { margin: 0; font-family: var(--font-head); font-size: 18px; font-weight: 600; }
 .dates { font-size: 13px; color: var(--muted); }
