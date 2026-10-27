@@ -4,7 +4,7 @@ import { MEDIA_BASE } from "../content/site";
 import { PlayIcon } from "./Icons";
 import YouTube from "./YouTube";
 
-type Sources = { hd: string; sd?: string };
+type Sources = { hd: string; sd?: string; pending?: boolean };
 
 // Picks the lighter 720p file on phones and slow connections, 1080p elsewhere.
 function pickSource(src: Sources) {
@@ -25,7 +25,7 @@ export default function Video({
   const frame = `${big ? "video-frame big" : "video-frame"} ${className}`.trim();
 
   // Cloudflare R2: play the file directly in the page.
-  if (MEDIA_BASE && r2) {
+  if (MEDIA_BASE && r2 && !r2.pending) {
     if (on) {
       return (
         <div className={frame} style={{ cursor: "default" }}>

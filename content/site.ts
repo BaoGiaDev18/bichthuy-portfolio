@@ -22,10 +22,10 @@ export const CONTACT = {
 // Long videos are stored in Cloudflare R2 and play directly on the site.
 // MEDIA_BASE is the bucket's public URL (no trailing slash). While it is empty,
 // the site falls back to the YouTube / Google Drive links in VIDEOS.
-export const MEDIA_BASE = "";
+export const MEDIA_BASE = "https://pub-6fd83ceb40c94ede9453b460892d1f98.r2.dev";
 
 export const R2_VIDEOS = {
-  film: { hd: "film-1080.mp4", sd: "film-720.mp4" },
+  film: { hd: "film-1080.mp4", sd: "film-720.mp4", pending: true }, // pending: still uploading, YouTube is used meanwhile
   recap: { hd: "recap-1080.mp4", sd: "recap-720.mp4" },
   dirtycoins: { hd: "dirtycoins-1080.mp4", sd: "dirtycoins-720.mp4" },
   mv: { hd: "cu-tho-di-1080.mp4", sd: "cu-tho-di-720.mp4" },
