@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bichthuyportfolio.vercel.app/sitemap.xml
+Sitemap: https://bichthuy-portfolio.vercel.app/sitemap.xml

@@ -2,7 +2,7 @@
 
 Personal portfolio site built with Next.js (static export) and hosted on Vercel.
 
-Live site: https://bichthuyportfolio.vercel.app
+Live site: https://bichthuy-portfolio.vercel.app
 
 ## Pages
 

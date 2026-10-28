@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DICT, PATHS, type Lang, type PageKey } from "../content/site";
 
-export const SITE_URL = "https://bichthuyportfolio.vercel.app";
+export const SITE_URL = "https://bichthuy-portfolio.vercel.app";
 
 const PAGE_TITLES: Record<PageKey, Record<Lang, string | null>> = {
   home: { en: null, vi: null },
